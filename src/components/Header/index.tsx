@@ -1,7 +1,6 @@
 import React from "react";
-import "./style/index.css";
 import Logo from "../../assets/b.png";
-
+import "./style/index.css";
 export const Header = () => {
   return (
     <div className="header">
@@ -16,12 +15,6 @@ export const Header = () => {
               <button className="login-button">Sign Up</button>
             </li>
           </ul>
-        </div>
-        <div className="hero">
-          <div className="hero-left">
-            <h2>Explore a imóveis e garanta a sua casa ideal</h2>
-          </div>
-          <div className="hero-right" />
         </div>
       </div>
     </div>
