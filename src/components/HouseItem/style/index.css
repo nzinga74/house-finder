@@ -1,0 +1,53 @@
+.house-item {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 20px;
+    border: 1px solid #F0F2FC;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 5px;
+}
+.house-item:last-child{
+    margin-right: 0px;
+}
+.house-iem-content{
+    padding: 20px;
+}
+
+.house-item img {
+    width: 100%;
+   border-radius: 10px;
+}
+.house-item ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+.house-item h4 {
+    margin-bottom: 15px;
+}
+.house-item ul li {
+    
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 4px;
+}
+.house-item-footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.book-button {
+    padding: 10px 20px;
+    background-color: #1D45F0;
+    border: 0px;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    vertical-align: middle;
+    cursor: pointer;
+    
+}
