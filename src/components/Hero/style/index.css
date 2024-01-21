@@ -42,10 +42,11 @@
     margin-top: -50px;
     border-radius: 10px;
     border: 0px;
-     box-shadow: rgb(18 30 52 / 7%) 0px 1px 1px;
+     box-shadow: rgb(18 30 52 / 45%) 0px 1px 1px;
      padding: 24px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .search-form-input{
     width: 25%;

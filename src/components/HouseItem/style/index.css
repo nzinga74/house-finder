@@ -1,15 +1,13 @@
 .house-item {
     width: 100%;
     max-width: 300px;
-    margin-right: 20px;
+
     border: 1px solid #F0F2FC;
     padding: 10px;
     padding-top: 20px;
     border-radius: 5px;
 }
-.house-item:last-child{
-    margin-right: 0px;
-}
+
 .house-iem-content{
     padding: 20px;
 }
