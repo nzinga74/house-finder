@@ -12,15 +12,35 @@ const Cities = () => {
           <div className="galeria">
             <div className="single-galeria wg2 hg2">
               <img src={City1} />
+              <div className="overlay">
+                <div className="content">
+                  <p>Cidade de Malásia</p>
+                </div>
+              </div>
             </div>
             <div className="single-galeria wg2 hg1">
               <img src={City2} />
+              <div className="overlay">
+                <div className="content">
+                  <p>Cidade de Malásia</p>
+                </div>
+              </div>
             </div>
             <div className="single-galeria">
               <img src={City5} />
+              <div className="overlay">
+                <div className="content">
+                  <p>Cidade de Malásia</p>
+                </div>
+              </div>
             </div>
             <div className="single-galeria">
               <img src={City4} />
+              <div className="overlay">
+                <div className="content">
+                  <p>Cidade de Malásia</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
