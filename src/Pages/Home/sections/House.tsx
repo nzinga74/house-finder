@@ -17,7 +17,7 @@ const House = ({ title }: HouseProps) => {
             modules={[Autoplay]}
             autoplay
             spaceBetween={50}
-            slidesPerView={3}
+            slidesPerView={4}
             onSlideChange={() => console.log("slide change")}
           >
             <SwiperSlide>
@@ -32,7 +32,6 @@ const House = ({ title }: HouseProps) => {
             <SwiperSlide>
               <HouseItem />
             </SwiperSlide>
-            ...
           </Swiper>
         </div>
       </div>
