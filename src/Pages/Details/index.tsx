@@ -6,7 +6,7 @@ import ThirdHomeIMG from "../../assets/details3.jpg";
 import FOurHomeIMG from "../../assets/details4.jpg";
 import FiveHomeIMG from "../../assets/details5.jpg";
 import { FaBath, FaDesktop } from "react-icons/fa";
-import { FaKitchenSet } from "react-icons/fa6";
+import { FaKitchenSet, FaLocationDot } from "react-icons/fa6";
 import "./style/index.css";
 import GoogleMapReact from "google-map-react";
 interface AnyProps {
@@ -76,10 +76,29 @@ const Details = () => {
                   }}
                   defaultCenter={defaultProps.center}
                   defaultZoom={defaultProps.zoom}
-                ></GoogleMapReact>
+                />
               </div>
             </div>
-            <div className="detail-right"></div>
+            <div className="detail-right">
+              <h3>ÚLTIMAS NOVIDADES</h3>
+              <div className="house-news-container">
+                {[0, 0, 0, 0].map((t) => (
+                  <div className="house-news-item">
+                    <div className="house-news-item-img">
+                      <img src={FiveHomeIMG} />
+                    </div>
+                    <div className="house-news-item-content">
+                      <h4>CASA MODERNA XPTO 12</h4>
+                      <div className="house-news-icon">
+                        <FaLocationDot />
+                        <p>Rua Miranda, Casa 12</p>
+                      </div>
+                      <p className="house-news-price">$4560</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
