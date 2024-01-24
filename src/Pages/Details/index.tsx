@@ -78,6 +78,20 @@ const Details = () => {
                   defaultZoom={defaultProps.zoom}
                 />
               </div>
+              <div className="reserve-button-container">
+                <h4>Realizar reserva</h4>
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC, making it over 2000 years old. Richard McClintock,
+                  a Latin professor at Hampden-Sydney College in Virginia,
+                  looked up one of the more obscure Latin words, consectetur,
+                  from a Lorem Ipsum passage, and going through the cites of the
+                  word in classical literature
+                </p>
+                <p />
+                <button className="reserve-button">Reservar</button>
+              </div>
             </div>
             <div className="detail-right">
               <h3>ÚLTIMAS NOVIDADES</h3>

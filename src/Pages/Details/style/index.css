@@ -63,7 +63,7 @@
     color: #9FA3AC;
 }
 .map-container {
-    height: 400px;
+    height: 450px;
     padding: 30px;
     border: 1px solid #F0F2FC;
     margin-top: 28px;
@@ -121,4 +121,26 @@
    font-size: 15px;
    margin-top: 5px;
    font-weight: bold;
+}
+.reserve-button {
+    padding: 15px 30px;
+    background-color: #1D45F0;
+    border: 0px;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.reserve-button-container{
+  
+    margin: 20px 0px;
+    background-color: #FFF9EF;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.reserve-button-container p {
+    margin-top: 10px;
 }
