@@ -2,7 +2,7 @@
     margin-top: 20px;
     border-radius: 10px;
     width: 100%;
-    height: 600px;
+   
     object-fit: cover;
 }
 
@@ -16,7 +16,7 @@
 .imgContainer > img {
    width: 100%;
    border-radius: 10px;
-   max-height: 172px;
+  height: 140px;
    cursor: pointer;
    
    
@@ -26,7 +26,7 @@
 }
 .details-icon-container {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto ;
     gap: 10;
 }
 .detail-item-icon {
@@ -38,4 +38,35 @@
 }
 .details-icon-container {
     padding: 30px;
+    background-color: #FFF9EF;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.detail-left {
+    width: 75%;
+}
+.detail-right {
+    width: 25%;
+}
+.detail-menu {
+    display: flex;
+}
+.description-container  {
+    margin-top: 20px;
+}
+.description-container p {
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 10px;
+    color: #9FA3AC;
+}
+.map-container {
+    height: 400px;
+    padding: 30px;
+    border: 1px solid #F0F2FC;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.description-container h3 {
+   
 }
