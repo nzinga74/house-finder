@@ -16,10 +16,13 @@ const House = ({ title }: HouseProps) => {
           <Swiper
             modules={[Autoplay]}
             autoplay
-            spaceBetween={50}
+            spaceBetween={10}
             slidesPerView={4}
             onSlideChange={() => console.log("slide change")}
           >
+            <SwiperSlide>
+              <HouseItem />
+            </SwiperSlide>
             <SwiperSlide>
               <HouseItem />
             </SwiperSlide>

@@ -21,7 +21,7 @@
    
    
 }
-.details-container h2 {
+.details-container  {
     margin-top: 20px;
 }
 .details-icon-container {
@@ -49,6 +49,7 @@
     width: 25%;
     padding: 20PX 40PX;
     padding-right: 0px;
+    padding-top: 0px;
 }
 .detail-menu {
     display: flex;

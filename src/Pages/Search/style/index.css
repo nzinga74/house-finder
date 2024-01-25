@@ -1,0 +1,38 @@
+.search-page-container-left{
+    width: 25%;
+    padding: 5px;
+}
+.search-page-container{
+    display: flex;
+    margin-top: 20px;
+}
+.search-page-container-right{
+    width: 75%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+}
+.search-filter {
+    padding: 20px;
+    border: 1px solid #F0F2FC;
+    margin-top: 10px;
+}
+.search-filter h4 {
+    margin-top: 15px;
+    font-size: 15px;
+    
+}
+.select-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    background-color: white;
+    webkit-appearance: none;
+    /* Remove estilo padrão do Chrome */
+    -moz-appearance: none;
+    border: 1px solid #F0F2FC;
+    color: #9FA3AC;
+    font-size: 17px;
+}
