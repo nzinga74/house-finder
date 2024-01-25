@@ -1,0 +1,146 @@
+.imgCenter {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+   
+    object-fit: cover;
+}
+
+.imgContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    gap: 10px;
+    /* margin: 10px 0px; */
+}
+.imgContainer > img {
+   width: 100%;
+   border-radius: 10px;
+  height: 140px;
+   cursor: pointer;
+   
+   
+}
+.details-container h2 {
+    margin-top: 20px;
+}
+.details-icon-container {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 10;
+}
+.detail-item-icon {
+    display: flex;
+    align-items: center;
+}
+.detail-item-icon p {
+    margin-left: 10px;
+}
+.details-icon-container {
+    padding: 30px;
+    background-color: #FFF9EF;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.detail-left {
+    width: 75%;
+}
+.detail-right {
+    width: 25%;
+    padding: 20PX 40PX;
+    padding-right: 0px;
+}
+.detail-menu {
+    display: flex;
+}
+.description-container  {
+    margin-top: 20px;
+}
+.description-container p {
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 10px;
+    color: #9FA3AC;
+}
+.map-container {
+    height: 450px;
+    padding: 30px;
+    border: 1px solid #F0F2FC;
+    margin-top: 28px;
+    border-radius: 10px;
+}
+.description-container h3 {
+   
+}
+.house-news-item {
+    display: flex;
+    height: 100px;
+}
+.house-news-item-img{
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+} 
+.house-news-item-content{
+    width: 60%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+.house-news-item-content h4{
+    font-size: 14px;
+}
+.house-news-item-content p {
+    font-size: 13px;
+}
+.house-news-container {
+    margin-top: 20px;
+    border-radius: 8px;
+   
+}
+.house-news-item {
+    margin-bottom: 8px;
+}
+.house-news-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.house-news-icon {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.house-news-icon p {
+    margin-left: 5px;
+}
+.house-news-price {
+   font-size: 15px;
+   margin-top: 5px;
+   font-weight: bold;
+}
+.reserve-button {
+    padding: 15px 30px;
+    background-color: #1D45F0;
+    border: 0px;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.reserve-button-container{
+  
+    margin: 20px 0px;
+    background-color: #FFF9EF;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.reserve-button-container p {
+    margin-top: 10px;
+}
