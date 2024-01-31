@@ -6,6 +6,7 @@ import { Home } from "./Pages/Home";
 import Details from "./Pages/Details";
 import Search from "./Pages/Search";
 import Reserve from "./Pages/Reserve";
+import { Contract } from "./Pages/Contract";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/detail" element={<Details />} />
         <Route path="/search" element={<Search />} />
         <Route path="/reserve" element={<Reserve />} />
+        <Route path="/contract" element={<Contract />} />
       </Routes>
     </BrowserRouter>
   );
