@@ -8,8 +8,9 @@
 }
 .search-page-container-right{
     width: 75%;
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    gap: 10px;
+    
     
 }
 .search-filter {
