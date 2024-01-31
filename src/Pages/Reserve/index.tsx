@@ -5,9 +5,10 @@ import ThirdHomeIMG from "../../assets/details3.jpg";
 import FOurHomeIMG from "../../assets/details4.jpg";
 import FiveHomeIMG from "../../assets/details5.jpg";
 import { Header } from "../../components/Header";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaCalendar, FaCalendarCheck } from "react-icons/fa6";
 
 import "./style/index.css";
+import { ReserveItem } from "../../components/ReserveItem";
 
 const Reserve = () => {
   return (
@@ -17,17 +18,10 @@ const Reserve = () => {
         <div className="container">
           <div className="reserve-list-container">
             <div className="reserve-list-left">
-              <div className="reserve-item">
-                <div>
-                  <h4>CASA MODERNA XPTO 12</h4>
-                  <div className="house-news-icon">
-                    <FaLocationDot />
-                    <p>Rua Miranda, Casa 12</p>
-                  </div>
-                  <div className="status">EM ANDAMENTO</div>
-                </div>
-                <div />
-              </div>
+              <ReserveItem />
+              <ReserveItem />
+              <ReserveItem />
+              <ReserveItem />
             </div>
 
             <div className="reserve-list-right">
@@ -38,6 +32,17 @@ const Reserve = () => {
                 <img src={ThirdHomeIMG} />
                 <img src={FOurHomeIMG} />
                 <img src={FiveHomeIMG} />
+              </div>
+              <div className="reserve-button-container">
+                <h4>Editar reserva</h4>
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC, making it over 2000 years old. Richard McClintock,
+                  a Latin professor at Hampden-Sydney College in Virginia,
+                </p>
+                <p />
+                <button className="reserve-button">Editar Reservar</button>
               </div>
             </div>
           </div>

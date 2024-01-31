@@ -1,7 +1,7 @@
 .reserve-container {
     background: #FAFAFA;
     height: 100%;
-    padding-top: 40px;
+    padding: 40px 0px;
     
 }
 
@@ -16,7 +16,7 @@
 .reserve-list-left {
     width: 40%;
     background-color: white;
-    height: 100%;
+    height: auto;
     min-height: 600px;
     border-radius: 10px;
     border-top-right-radius: 0px;
@@ -27,7 +27,7 @@
 .reserve-list-right {
     width: 60%;
     background-color: white;
-    height: 100%;
+    height: auto;
     min-height: 600px;
     border-radius: 10px;
     border-top-left-radius: 0px;
@@ -39,20 +39,4 @@
 .reserve-list-right h3 {
     margin-bottom: 8px;
 
-}
-.status{
-    background-color: #f2711c;
-    width: auto;
-    color: white;
-    padding: 8px;
-    margin-top: 10px;
-    border-radius: 2px;
-    width: fit-content;
-}
-
-.reserve-item {
-    padding: 20px;
-    border-bottom:1px solid #F0F2FC;
-    display: grid;
-    grid-template-columns: auto auto;
 }
