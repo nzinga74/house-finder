@@ -1,0 +1,42 @@
+.reserve-container {
+    background: #FAFAFA;
+    height: 100%;
+    padding: 40px 0px;
+    
+}
+
+.reserve-list-container {
+    width: 100%;
+    display: flex;
+    
+    border-radius: 10px;
+    gap: 8px;
+}
+
+.reserve-list-left {
+    width: 40%;
+    background-color: white;
+    height: auto;
+    min-height: 600px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border:1px solid #F0F2FC
+
+}
+.reserve-list-right {
+    width: 60%;
+    background-color: white;
+    height: auto;
+    min-height: 600px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border:1px solid #F0F2FC;
+    padding: 40px;
+}
+
+.reserve-list-right h3 {
+    margin-bottom: 8px;
+
+}

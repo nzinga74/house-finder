@@ -1,0 +1,28 @@
+.contract-item{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom:3px solid #F0F2FC;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out ;
+}
+.contract-item:hover {
+    background: #fafbfb;
+    border-left: 4px solid #0E1625;
+    box-sizing: border-box;
+}
+.contract-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.contract-item h4 {
+    margin: 5px 0px;
+}
+.contract-item p {
+    font-size: 15px;
+    margin: 5px 0px;
+}
+.contract-item .contract-date {
+    font-size: 14px;
+}

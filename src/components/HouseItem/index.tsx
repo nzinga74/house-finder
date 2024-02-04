@@ -1,6 +1,9 @@
 import "./style/index.css";
 import House from "../../assets/house.jpg";
+import { useNavigate } from "react-router-dom";
+
 const HouseItem = () => {
+  const navigate = useNavigate();
   return (
     <div className="house-item">
       <img src={House} />
@@ -13,7 +16,9 @@ const HouseItem = () => {
           <li>1 Cozinhas</li>
         </ul>
         <div className="house-item-footer">
-          <button className="book-button">Reservar</button>
+          <button className="book-button" onClick={() => navigate("/detail")}>
+            Ver Mais
+          </button>
           <p>$350.99</p>
         </div>
       </div>

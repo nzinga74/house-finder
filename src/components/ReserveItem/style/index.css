@@ -1,0 +1,35 @@
+.status{
+    background-color: #f2711c;
+    width: auto;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    width: fit-content;
+    font-size: 12px;
+    height: fit-content;
+}
+
+.reserve-item {
+    padding: 30px;
+    border-bottom:3px solid #F0F2FC;
+    display: grid;
+    background: white;
+    grid-template-columns: auto auto;
+    cursor: pointer;
+}
+.reserve-item:hover {
+    background: #fafbfb;
+    
+}
+.reserve-item-left {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+
+}
+.reserve-price {
+    font-size: 16px;
+    font-weight: 600;
+}
