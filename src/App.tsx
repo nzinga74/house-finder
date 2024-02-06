@@ -7,6 +7,7 @@ import Details from "./Pages/Details";
 import Search from "./Pages/Search";
 import Reserve from "./Pages/Reserve";
 import { Contract } from "./Pages/Contract";
+import { Login } from "./Pages/Login";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/reserve" element={<Reserve />} />
         <Route path="/contract" element={<Contract />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
