@@ -11,6 +11,12 @@
     border-left: 4px solid #0E1625;
     box-sizing: border-box;
 }
+
+.selected-contract {
+    background: #fafbfb;
+    border-left: 4px solid #0E1625;
+    box-sizing: border-box;
+}
 .contract-item img {
     width: 100px;
     height: 100px;

@@ -33,9 +33,9 @@ const Search = () => {
             </div>
           </div>
           <div className="search-page-container-right">
+            {/* <HouseItem />
             <HouseItem />
-            <HouseItem />
-            <HouseItem />
+            <HouseItem /> */}
           </div>
         </div>
       </div>

@@ -21,6 +21,9 @@
     background: #fafbfb;
     
 }
+.status-green {
+    background-color: green !important;
+}
 .reserve-item-left {
     display: flex;
     flex-wrap: wrap;
