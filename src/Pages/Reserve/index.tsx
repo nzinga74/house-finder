@@ -9,8 +9,22 @@ import { FaLocationDot, FaCalendar, FaCalendarCheck } from "react-icons/fa6";
 
 import "./style/index.css";
 import { ReserveItem } from "../../components/ReserveItem";
+import { useEffect, useState } from "react";
+import { IReserve } from "../../models/reserve/IReserve";
+import { getReserves } from "../../services/gets";
 
 const Reserve = () => {
+  useEffect(() => {
+    initialData();
+  }, []);
+  const [reserves, setReserves] = useState<IReserve[]>([]);
+  const initialData = async () => {
+    const clientId = 1;
+    const allReserves = await getReserves(clientId);
+    if (allReserves) {
+      setReserves(allReserves);
+    }
+  };
   return (
     <>
       <Header />
@@ -18,10 +32,9 @@ const Reserve = () => {
         <div className="container">
           <div className="reserve-list-container">
             <div className="reserve-list-left">
-              <ReserveItem />
-              <ReserveItem />
-              <ReserveItem />
-              <ReserveItem />
+              {reserves.map((reserve) => (
+                <ReserveItem reserve={reserve} />
+              ))}
             </div>
 
             <div className="reserve-list-right">

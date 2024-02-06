@@ -20,6 +20,15 @@ const getProperty = async (propertyId: number) => {
   }
 };
 
+const getReserves = async (clientId: number) => {
+  try {
+    const reserves = await api.get(`/reserves?=${clientId}`);
+    return reserves.data.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const getcontrats = async (clientId: number) => {
   try {
     const contracts = await api.get(`contracts/all/?${clientId}`);
@@ -28,4 +37,4 @@ const getcontrats = async (clientId: number) => {
     console.log(error);
   }
 };
-export { getProperties, getProperty, getcontrats };
+export { getProperties, getProperty, getcontrats, getReserves };
