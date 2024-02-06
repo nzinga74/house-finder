@@ -2,12 +2,14 @@ import HouseItem from "../../../components/HouseItem";
 import "./style/index.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { IProperty } from "../../../models/property/IProperty";
 
 interface HouseProps {
   title: string;
+  properties: IProperty[];
 }
 
-const House = ({ title }: HouseProps) => {
+const House = ({ title, properties }: HouseProps) => {
   return (
     <>
       <div className="container">
@@ -20,21 +22,13 @@ const House = ({ title }: HouseProps) => {
             slidesPerView={4}
             onSlideChange={() => console.log("slide change")}
           >
-            <SwiperSlide>
-              <HouseItem />
-            </SwiperSlide>
-            <SwiperSlide>
-              <HouseItem />
-            </SwiperSlide>
-            <SwiperSlide>
-              <HouseItem />
-            </SwiperSlide>
-            <SwiperSlide>
-              <HouseItem />
-            </SwiperSlide>
-            <SwiperSlide>
-              <HouseItem />
-            </SwiperSlide>
+            {properties.map((property) => (
+              <>
+                <SwiperSlide>
+                  <HouseItem property={property} />
+                </SwiperSlide>
+              </>
+            ))}
           </Swiper>
         </div>
       </div>

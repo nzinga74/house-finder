@@ -3,7 +3,12 @@ import Footer from "../../components/Footer";
 import { Header } from "../../components/Header";
 import "./style/index.css";
 import { ContractItem } from "../../components/ContractItem";
+import { getcontrats } from "../../services/gets";
 const Contract = () => {
+  const initialData = async () => {
+    const clientId = 1;
+    const contracts = await getcontrats(clientId);
+  };
   return (
     <>
       <Header />

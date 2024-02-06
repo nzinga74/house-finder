@@ -13,8 +13,10 @@
 }
 
 .house-item img {
-    width: 100%;
+   width: 100%;
    border-radius: 10px;
+ 
+   height: 200px;
 }
 .house-item ul {
     list-style: none;
