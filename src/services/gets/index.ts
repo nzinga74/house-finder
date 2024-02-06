@@ -29,6 +29,15 @@ const getReserves = async (clientId: number) => {
   }
 };
 
+const getPropertyType = async () => {
+  try {
+    const propertyTypies = await api.get("")
+  }
+  catch(error) {
+    console.log(error)
+  }
+}
+
 const getcontrats = async (clientId: number) => {
   try {
     const contracts = await api.get(`contracts/all/?${clientId}`);
