@@ -1,3 +1,5 @@
+import { IUserAddress } from "./IUserAddress";
+
 export interface IUser {
   id: number;
   name: string;
@@ -7,4 +9,5 @@ export interface IUser {
   password: string;
   created_at?: Date;
   updated_at?: Date;
+  address?: IUserAddress;
 }

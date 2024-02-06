@@ -2,7 +2,7 @@ import { IClient } from "../client/IClient";
 import { IProperty } from "../property/IProperty";
 import { IUser } from "../user/IUser";
 
-export interface Contract {
+export interface IContract {
   id?: number;
   description: string;
   propertyId: number;
