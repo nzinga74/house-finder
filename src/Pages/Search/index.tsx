@@ -16,14 +16,6 @@ const Search = () => {
                 <option>200000kz - 300000kz</option>
                 <option>400000kz - 500000kz</option>
               </select>
-
-              <h4>Cidades</h4>
-              <select className="select-input">
-                <option>Luanda</option>
-                <option>Benguela</option>
-                <option>Bengo</option>
-              </select>
-
               <h4>Tipo de Casa</h4>
               <select className="select-input">
                 <option>Moderno</option>

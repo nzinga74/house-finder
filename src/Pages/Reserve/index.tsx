@@ -12,12 +12,14 @@ import { ReserveItem } from "../../components/ReserveItem";
 import { useEffect, useState } from "react";
 import { IReserve } from "../../models/reserve/IReserve";
 import { getReserves } from "../../services/gets";
+import { baseURL } from "../../services/api";
 
 const Reserve = () => {
   useEffect(() => {
     initialData();
   }, []);
   const [reserves, setReserves] = useState<IReserve[]>([]);
+  const [selectedReserveIndex, setSelectedReserveIndex] = useState<number>(0);
   const initialData = async () => {
     const clientId = 1;
     const allReserves = await getReserves(clientId);
@@ -25,6 +27,8 @@ const Reserve = () => {
       setReserves(allReserves);
     }
   };
+  const selectedReserve = reserves[selectedReserveIndex];
+  const selectedProperty = selectedReserve?.property
   return (
     <>
       <Header />
@@ -32,19 +36,20 @@ const Reserve = () => {
         <div className="container">
           <div className="reserve-list-container">
             <div className="reserve-list-left">
-              {reserves.map((reserve) => (
-                <ReserveItem reserve={reserve} />
+              {reserves.map((reserve, index) => (
+                <ReserveItem reserve={reserve} onClick={()=> setSelectedReserveIndex(index)} isSelected={selectedReserveIndex == index} />
               ))}
             </div>
 
             <div className="reserve-list-right">
-              <h3>CASA MODERNA XPTO 12</h3>
-              <img className="imgCenter" src={FirstHomeIMG} />
+              <h3>{selectedProperty?.name}</h3>
+              <img className="imgCenter" src={selectedProperty?.PropertyImages != undefined ? `${baseURL}/static/${selectedProperty?.PropertyImages[0]?.image}` : FirstHomeIMG} />
               <div className="imgContainer">
-                <img src={SecondHomeIMG} />
-                <img src={ThirdHomeIMG} />
-                <img src={FOurHomeIMG} />
-                <img src={FiveHomeIMG} />
+                {selectedProperty?.PropertyImages?.map( images => (
+                  <img src={`${baseURL}/static/${images?.image}`} />
+                ))}
+                
+                
               </div>
               <div className="reserve-button-container">
                 <h4>Editar reserva</h4>

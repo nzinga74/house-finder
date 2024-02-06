@@ -3,10 +3,12 @@ import "./style/index.css";
 import { IReserve } from "../../models/reserve/IReserve";
 interface IReserveProps {
   reserve: IReserve;
+  isSelected: boolean
+  onClick():void
 }
-const ReserveItem = ({ reserve }: IReserveProps) => {
+const ReserveItem = ({ reserve,onClick, isSelected }: IReserveProps) => {
   return (
-    <div className="reserve-item">
+    <div className={`reserve-item ${isSelected ? "selected-contract" : "" }`}  onClick={()=> onClick()}>
       <div>
         <h4>{reserve.property?.name}</h4>
 

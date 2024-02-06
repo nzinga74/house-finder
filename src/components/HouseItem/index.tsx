@@ -21,7 +21,10 @@ const HouseItem = ({ property }: HouseItemProps) => {
           <li>{property.numberOfBedrooms} Cozinhas</li>
         </ul>
         <div className="house-item-footer">
-          <button className="book-button" onClick={() => navigate("/detail")}>
+          <button
+            className="book-button"
+            onClick={() => navigate(`/detail/${property.id}`)}
+          >
             Ver Mais
           </button>
           <p>${property.price}</p>
