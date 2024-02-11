@@ -15,6 +15,7 @@
 }
 .imgContainer > img {
    width: 100%;
+   max-width: 261px;
    border-radius: 10px;
   height: 140px;
    cursor: pointer;

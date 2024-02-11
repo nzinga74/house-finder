@@ -1,19 +1,32 @@
 import "./style/index.css";
 import Avatar from "../../assets/avatar.jpg";
-const ContractItem = () => {
+interface IContractItemProps {
+  name: string | undefined;
+  description: string | undefined;
+  date: Date | undefined;
+  isSelected: boolean;
+  onclick(): void;
+}
+const ContractItem = ({
+  date,
+  description,
+  name,
+  isSelected,
+  onclick,
+}: IContractItemProps) => {
   return (
     <>
-      <div className="contract-item">
+      <div
+        className={`contract-item ${isSelected ? "selected-contract" : ""}`}
+        onClick={() => onclick()}
+      >
         <div>
           <img src={Avatar} />
         </div>
         <div>
-          <h4>EMPRESA LFG - CASA XPTO</h4>
-          <p className="contract-date">12/20/2023</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            enim
-          </p>
+          <h4>{name}</h4>
+          <p className="contract-date">{date?.toString()}</p>
+          <p>{description?.substring(0, 40)}</p>
         </div>
       </div>
     </>

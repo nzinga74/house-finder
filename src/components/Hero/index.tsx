@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style/index.css";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="main-hero">
@@ -49,7 +51,12 @@ const Hero = () => {
             </select>
           </div>
           <div className="search-form-input">
-            <button className="search-button">Pesquisar</button>
+            <button
+              className="search-button"
+              onClick={() => navigate("/search")}
+            >
+              Pesquisar
+            </button>
           </div>
         </div>
       </div>
