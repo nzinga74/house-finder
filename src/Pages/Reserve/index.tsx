@@ -13,22 +13,27 @@ import { useEffect, useState } from "react";
 import { IReserve } from "../../models/reserve/IReserve";
 import { getReserves } from "../../services/gets";
 import { baseURL } from "../../services/api";
+import { useAUth } from "../../provider/context/authContext";
 
 const Reserve = () => {
+  const { users } = useAUth();
+  console.log(users);
   useEffect(() => {
     initialData();
-  }, []);
+  }, [users]);
   const [reserves, setReserves] = useState<IReserve[]>([]);
   const [selectedReserveIndex, setSelectedReserveIndex] = useState<number>(0);
+
   const initialData = async () => {
-    const clientId = 1;
-    const allReserves = await getReserves(clientId);
-    if (allReserves) {
-      setReserves(allReserves);
+    if (users != null) {
+      const allReserves = await getReserves(users?.id);
+      if (allReserves) {
+        setReserves(allReserves);
+      }
     }
   };
   const selectedReserve = reserves[selectedReserveIndex];
-  const selectedProperty = selectedReserve?.property
+  const selectedProperty = selectedReserve?.property;
   return (
     <>
       <Header />
@@ -37,31 +42,45 @@ const Reserve = () => {
           <div className="reserve-list-container">
             <div className="reserve-list-left">
               {reserves.map((reserve, index) => (
-                <ReserveItem reserve={reserve} onClick={()=> setSelectedReserveIndex(index)} isSelected={selectedReserveIndex == index} />
+                <ReserveItem
+                  reserve={reserve}
+                  onClick={() => setSelectedReserveIndex(index)}
+                  isSelected={selectedReserveIndex == index}
+                />
               ))}
             </div>
 
             <div className="reserve-list-right">
-              <h3>{selectedProperty?.name}</h3>
-              <img className="imgCenter" src={selectedProperty?.PropertyImages != undefined ? `${baseURL}/static/${selectedProperty?.PropertyImages[0]?.image}` : FirstHomeIMG} />
-              <div className="imgContainer">
-                {selectedProperty?.PropertyImages?.map( images => (
-                  <img src={`${baseURL}/static/${images?.image}`} />
-                ))}
-                
-                
-              </div>
-              <div className="reserve-button-container">
-                <h4>Editar reserva</h4>
-                <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC, making it over 2000 years old. Richard McClintock,
-                  a Latin professor at Hampden-Sydney College in Virginia,
-                </p>
-                <p />
-                <button className="reserve-button">Editar Reservar</button>
-              </div>
+              {reserves.length > 0 && (
+                <>
+                  <h3>{selectedProperty?.name}</h3>
+                  <img
+                    className="imgCenter"
+                    src={
+                      selectedProperty?.PropertyImages != undefined
+                        ? `${baseURL}/static/${selectedProperty?.PropertyImages[0]?.image}`
+                        : FirstHomeIMG
+                    }
+                  />
+                  <div className="imgContainer">
+                    {selectedProperty?.PropertyImages?.map((images) => (
+                      <img src={`${baseURL}/static/${images?.image}`} />
+                    ))}
+                  </div>
+                  <div className="reserve-button-container">
+                    <h4>Editar reserva</h4>
+                    <p>
+                      Contrary to popular belief, Lorem Ipsum is not simply
+                      random text. It has roots in a piece of classical Latin
+                      literature from 45 BC, making it over 2000 years old.
+                      Richard McClintock, a Latin professor at Hampden-Sydney
+                      College in Virginia,
+                    </p>
+                    <p />
+                    <button className="reserve-button">Editar Reservar</button>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>

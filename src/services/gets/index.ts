@@ -1,3 +1,5 @@
+import { IFilterPropertyDTO } from "../../models/dtos/IFilterPropertyDTO";
+import { IFilterReserveDTO } from "../../models/dtos/IFilterReserveDTO";
 import { propertiesTransform } from "../../utils/propertiesTransform";
 import { api } from "../api";
 const getProperties = async (propertyId: number) => {
@@ -22,28 +24,42 @@ const getProperty = async (propertyId: number) => {
 
 const getReserves = async (clientId: number) => {
   try {
-    const reserves = await api.get(`/reserves?=${clientId}`);
+    const reserves = await api.get(`/reserves?clientId=${clientId}`);
     return reserves.data.data;
   } catch (error) {
     console.log(error);
   }
 };
 
-const getPropertyType = async () => {
+const searchProperties = async (data: IFilterPropertyDTO) => {
+  let urlProperties = `/properties/actives`;
+  if (data.propertyTypeId) {
+    urlProperties = `/properties/actives?propertyTypeId=${data.propertyTypeId}`;
+  }
+  if (data.maxPrice && data.minPrice) {
+    urlProperties +=
+      urlProperties + `?maxPrice=${data.maxPrice}? minPrice=${data.minPrice}`;
+  }
   try {
-    const propertyTypies = await api.get("")
+    const response = await api.get(urlProperties);
+    return response.data.data;
+  } catch (error: any) {
+    throw new Error(error.response.data.message);
   }
-  catch(error) {
-    console.log(error)
-  }
-}
+};
 
 const getcontrats = async (clientId: number) => {
   try {
-    const contracts = await api.get(`contracts/all/?${clientId}`);
+    const contracts = await api.get(`contracts/all/?clientId=${clientId}`);
     return contracts.data.data;
   } catch (error) {
     console.log(error);
   }
 };
-export { getProperties, getProperty, getcontrats, getReserves };
+export {
+  getProperties,
+  getProperty,
+  getcontrats,
+  getReserves,
+  searchProperties,
+};

@@ -14,13 +14,41 @@ import { useEffect, useState } from "react";
 import { getProperty } from "../../services/gets";
 import { IProperty } from "../../models/property/IProperty";
 import { baseURL } from "../../services/api";
+import { Field, Form, Formik } from "formik";
+import { toast } from "react-toastify";
+import { useAUth } from "../../provider/context/authContext";
+import { addReserve } from "../../services/post";
 
 const Details = () => {
   const { id } = useParams();
   const [property, setProperty] = useState<IProperty>({} as IProperty);
+  const { users } = useAUth();
   useEffect(() => {
     initialPropertyData();
   }, []);
+  const onSubmit = async (value: any) => {
+    const date = new Date(value.date);
+    const currentDate = new Date();
+    if (date <= currentDate) {
+      toast.error("Data invalida");
+      return;
+    }
+    if (users != null) {
+      const reserve = {
+        userId: property.userId,
+        propertyId: property.id,
+        clientId: users.id,
+        isActived: true,
+        estimatedDate: date,
+      };
+      try {
+        await addReserve(reserve);
+        toast.success("Cadastrado com sucesso");
+      } catch (error: any) {
+        toast.error(error.message);
+      }
+    }
+  };
   const initialPropertyData = async () => {
     try {
       if (id) {
@@ -98,8 +126,21 @@ const Details = () => {
                   from a Lorem Ipsum passage, and going through the cites of the
                   word in classical literature
                 </p>
-                <p />
-                <button className="reserve-button">Reservar</button>
+                <Formik
+                  initialValues={{}}
+                  onSubmit={(value) => {
+                    onSubmit(value);
+                  }}
+                >
+                  <Form>
+                    <Field type="date" name="date" />
+                    <div>
+                      <button type="submit" className="reserve-button">
+                        Reservar
+                      </button>
+                    </div>
+                  </Form>
+                </Formik>
               </div>
             </div>
             <div className="detail-right">
